@@ -59,6 +59,20 @@
                                     <constraint firstAttribute="width" constant="50" id="gU8-SB-dOc"/>
                                 </constraints>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-LG-tov">
+                                <rect key="frame" x="172" y="279" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="agi-s1-f3c"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFr-0N-cjh">
+                                <rect key="frame" x="163.66666666666666" y="738" width="66" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show"/>
+                                <connections>
+                                    <action selector="showButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qy-HL-Y1L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,9 +82,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DvJ-3h-bsu" secondAttribute="trailing" constant="50" id="9pX-nY-Bfh"/>
                             <constraint firstItem="rvw-vw-P0e" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="67" id="FvV-ID-7vg"/>
                             <constraint firstItem="Ajx-bO-FYj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNs-ei-2kG"/>
+                            <constraint firstItem="oT2-LG-tov" firstAttribute="top" secondItem="rvw-vw-P0e" secondAttribute="bottom" constant="16" id="HvW-C3-7qj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TFr-0N-cjh" secondAttribute="bottom" constant="45" id="Jsi-9w-iXG"/>
                             <constraint firstItem="MaR-to-8p2" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="75" id="XhT-R5-lPH"/>
                             <constraint firstItem="Gxs-Vc-ZgL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5J-dp-dAc"/>
+                            <constraint firstItem="TFr-0N-cjh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePa-8J-V6e"/>
                             <constraint firstItem="rvw-vw-P0e" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="67" id="hry-e5-vWi"/>
+                            <constraint firstItem="oT2-LG-tov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j1t-d5-XFR"/>
                             <constraint firstItem="xWd-MA-hsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="oDc-u4-jQI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MaR-to-8p2" secondAttribute="trailing" constant="35" id="r2k-z0-0BW"/>
                             <constraint firstItem="DvJ-3h-bsu" firstAttribute="top" secondItem="Ajx-bO-FYj" secondAttribute="bottom" constant="16" id="uT7-Ff-AG6"/>
@@ -82,6 +100,7 @@
                     <connections>
                         <outlet property="imageView" destination="rvw-vw-P0e" id="HBF-aR-Qjx"/>
                         <outlet property="labelText" destination="Ajx-bO-FYj" id="ixH-Um-WIb"/>
+                        <outlet property="switchOutlet" destination="oT2-LG-tov" id="eg3-w1-JdF"/>
                         <outlet property="textField" destination="DvJ-3h-bsu" id="xSO-SC-dvH"/>
                     </connections>
                 </viewController>
