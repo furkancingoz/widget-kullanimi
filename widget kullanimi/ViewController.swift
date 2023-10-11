@@ -15,10 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var slideSonuc: UILabel!
     @IBOutlet weak var segmentedOut: UISegmentedControl!
     @IBOutlet weak var switchOutlet: UISwitch!
+    @IBOutlet weak var steperOut: UIStepper!
+    @IBOutlet weak var steperLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         slideSonuc.text = String(Int(slideOut.value))
+        steperLabel.text = String(Int(steperOut.value))
     }
     
     @IBAction func yapButton(_ sender: Any) {
@@ -39,6 +42,7 @@ class ViewController: UIViewController {
         let secilenKategori = segmentedOut.titleForSegment(at: secilenIndeks)
         print("Durum: \(secilenKategori!)")
         print("Slider:\(slideOut.value)")
+        print("Stepper:\(steperOut.value)")
         
     }
     @IBAction func smileButton(_ sender: Any) {
@@ -54,6 +58,9 @@ class ViewController: UIViewController {
     }
     @IBAction func slideAction(_ sender: UISlider) {
         slideSonuc.text = String(Int(sender.value))
+    }
+    @IBAction func steperAction(_ sender: UIStepper) {
+        steperLabel.text = String(Int(sender.value))
     }
 }
 
