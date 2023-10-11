@@ -18,8 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var steperOut: UIStepper!
     @IBOutlet weak var steperLabel: UILabel!
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicator.isHidden = true
         slideSonuc.text = String(Int(slideOut.value))
         steperLabel.text = String(Int(steperOut.value))
     }
@@ -62,6 +64,15 @@ class ViewController: UIViewController {
     @IBAction func steperAction(_ sender: UIStepper) {
         steperLabel.text = String(Int(sender.value))
     }
+    @IBAction func baslaButton(_ sender: Any) {
+        indicator.isHidden = false
+        indicator.startAnimating()
+    }
+    @IBAction func durButton(_ sender: Any) {
+        indicator.isHidden = true
+        indicator.stopAnimating()
+    }
+    
 }
 
 
