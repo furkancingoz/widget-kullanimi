@@ -84,10 +84,23 @@
                                     <action selector="segmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="uJc-Ju-tWx"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbn-Gf-RXv">
+                                <rect key="frame" x="175.66666666666666" y="416" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="STR-c7-5PF">
+                                <rect key="frame" x="28" y="452" width="337" height="31"/>
+                                <connections>
+                                    <action selector="slideAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lkg-zW-p2M"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qbn-Gf-RXv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="17j-l9-VWf"/>
                             <constraint firstItem="DvJ-3h-bsu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="21e-8R-3dJ"/>
                             <constraint firstItem="Ajx-bO-FYj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="7ZU-Jv-nhJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DvJ-3h-bsu" secondAttribute="trailing" constant="50" id="9pX-nY-Bfh"/>
@@ -96,11 +109,14 @@
                             <constraint firstItem="oT2-LG-tov" firstAttribute="top" secondItem="rvw-vw-P0e" secondAttribute="bottom" constant="16" id="HvW-C3-7qj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TFr-0N-cjh" secondAttribute="bottom" constant="45" id="Jsi-9w-iXG"/>
                             <constraint firstItem="QID-qH-NLY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ksg-DZ-RUg"/>
+                            <constraint firstItem="qbn-Gf-RXv" firstAttribute="top" secondItem="QID-qH-NLY" secondAttribute="bottom" constant="30" id="Wef-yg-rnU"/>
                             <constraint firstItem="MaR-to-8p2" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="75" id="XhT-R5-lPH"/>
                             <constraint firstItem="Gxs-Vc-ZgL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5J-dp-dAc"/>
                             <constraint firstItem="TFr-0N-cjh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePa-8J-V6e"/>
                             <constraint firstItem="rvw-vw-P0e" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="67" id="hry-e5-vWi"/>
                             <constraint firstItem="oT2-LG-tov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j1t-d5-XFR"/>
+                            <constraint firstItem="STR-c7-5PF" firstAttribute="top" secondItem="qbn-Gf-RXv" secondAttribute="bottom" constant="15" id="mKz-9K-ls4"/>
+                            <constraint firstItem="STR-c7-5PF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="mWl-HS-NYQ"/>
                             <constraint firstItem="QID-qH-NLY" firstAttribute="top" secondItem="oT2-LG-tov" secondAttribute="bottom" constant="45" id="nJV-SJ-daR"/>
                             <constraint firstItem="xWd-MA-hsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="oDc-u4-jQI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MaR-to-8p2" secondAttribute="trailing" constant="35" id="r2k-z0-0BW"/>
@@ -108,12 +124,15 @@
                             <constraint firstItem="rvw-vw-P0e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vjQ-d8-k88"/>
                             <constraint firstItem="xWd-MA-hsV" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="75" id="xEc-1d-7qv"/>
                             <constraint firstItem="Gxs-Vc-ZgL" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="16" id="xUJ-PZ-vfW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STR-c7-5PF" secondAttribute="trailing" constant="30" id="ybi-f6-CpD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="rvw-vw-P0e" id="HBF-aR-Qjx"/>
                         <outlet property="labelText" destination="Ajx-bO-FYj" id="ixH-Um-WIb"/>
                         <outlet property="segmentedOut" destination="QID-qH-NLY" id="gEz-uf-I35"/>
+                        <outlet property="slideOut" destination="STR-c7-5PF" id="HPM-of-x9n"/>
+                        <outlet property="slideSonuc" destination="qbn-Gf-RXv" id="7bw-Cd-0Cj"/>
                         <outlet property="switchOutlet" destination="oT2-LG-tov" id="eg3-w1-JdF"/>
                         <outlet property="textField" destination="DvJ-3h-bsu" id="xSO-SC-dvH"/>
                     </connections>
