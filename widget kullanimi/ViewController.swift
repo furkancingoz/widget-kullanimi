@@ -11,7 +11,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelText: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textField: UITextField!
+   
+    @IBOutlet weak var segmentedOut: UISegmentedControl!
     @IBOutlet weak var switchOutlet: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,17 +32,25 @@ class ViewController: UIViewController {
             print("off")
         }
     }
-    
-        @IBAction func showButton(_ sender: Any) {
-            print("switch son hali:\(switchOutlet.isOn)")
-            
-        }
-        @IBAction func smileButton(_ sender: Any) {
-            imageView.image = UIImage(named: "smile")
-        }
-        @IBAction func sadButton(_ sender: Any) {
-            imageView.image = UIImage(named: "sad")
-        }
+    @IBAction func showButton(_ sender: Any) {
+        print("switch son hali:\(switchOutlet.isOn)")
+        let secilenIndeks = segmentedOut.selectedSegmentIndex
+        let secilenKategori = segmentedOut.titleForSegment(at: secilenIndeks)
+        print("Durum: \(secilenKategori!)")
+    }
+    @IBAction func smileButton(_ sender: Any) {
+        imageView.image = UIImage(named: "smile")
+    }
+    @IBAction func sadButton(_ sender: Any) {
+        imageView.image = UIImage(named: "sad")
     }
     
+    @IBAction func segmentedAction(_ sender: UISegmentedControl) {
+        let secilenIndeks = sender.selectedSegmentIndex
+        let secilenKategori = sender.titleForSegment(at: secilenIndeks)
+        print("Seçim: \(secilenKategori!)")
+    }
+    
+}
+
 

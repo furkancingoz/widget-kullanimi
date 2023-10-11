@@ -73,6 +73,17 @@
                                     <action selector="showButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3qy-HL-Y1L"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QID-qH-NLY">
+                                <rect key="frame" x="81.666666666666686" y="355" width="230" height="32"/>
+                                <segments>
+                                    <segment title="Yemekler"/>
+                                    <segment title="Tatlılar"/>
+                                    <segment title="İçecekler"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="uJc-Ju-tWx"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,11 +95,13 @@
                             <constraint firstItem="Ajx-bO-FYj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HNs-ei-2kG"/>
                             <constraint firstItem="oT2-LG-tov" firstAttribute="top" secondItem="rvw-vw-P0e" secondAttribute="bottom" constant="16" id="HvW-C3-7qj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TFr-0N-cjh" secondAttribute="bottom" constant="45" id="Jsi-9w-iXG"/>
+                            <constraint firstItem="QID-qH-NLY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ksg-DZ-RUg"/>
                             <constraint firstItem="MaR-to-8p2" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="75" id="XhT-R5-lPH"/>
                             <constraint firstItem="Gxs-Vc-ZgL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b5J-dp-dAc"/>
                             <constraint firstItem="TFr-0N-cjh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ePa-8J-V6e"/>
                             <constraint firstItem="rvw-vw-P0e" firstAttribute="top" secondItem="DvJ-3h-bsu" secondAttribute="bottom" constant="67" id="hry-e5-vWi"/>
                             <constraint firstItem="oT2-LG-tov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j1t-d5-XFR"/>
+                            <constraint firstItem="QID-qH-NLY" firstAttribute="top" secondItem="oT2-LG-tov" secondAttribute="bottom" constant="45" id="nJV-SJ-daR"/>
                             <constraint firstItem="xWd-MA-hsV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="oDc-u4-jQI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MaR-to-8p2" secondAttribute="trailing" constant="35" id="r2k-z0-0BW"/>
                             <constraint firstItem="DvJ-3h-bsu" firstAttribute="top" secondItem="Ajx-bO-FYj" secondAttribute="bottom" constant="16" id="uT7-Ff-AG6"/>
@@ -100,6 +113,7 @@
                     <connections>
                         <outlet property="imageView" destination="rvw-vw-P0e" id="HBF-aR-Qjx"/>
                         <outlet property="labelText" destination="Ajx-bO-FYj" id="ixH-Um-WIb"/>
+                        <outlet property="segmentedOut" destination="QID-qH-NLY" id="gEz-uf-I35"/>
                         <outlet property="switchOutlet" destination="oT2-LG-tov" id="eg3-w1-JdF"/>
                         <outlet property="textField" destination="DvJ-3h-bsu" id="xSO-SC-dvH"/>
                     </connections>
